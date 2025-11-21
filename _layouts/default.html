@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="{{ '/blog/' | relative_url }}">Insights</a>
+        <a href="{{ '/practice/' | relative_url }}">Practice Areas</a>
+        <a href="{{ '/team/' | relative_url }}">Team</a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-sm">Contact</a>
+      </nav>
+      <button id="nav-toggle" aria-label="Toggle menu" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</div>
+      <nav class="footer-nav"><a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/disclaimer.html' | relative_url }}">Disclaimer</a></nav>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
