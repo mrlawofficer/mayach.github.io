@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mayach — Law Practice & Publications</title>
+  <meta name="description" content="Mayach — legal practice, insights and publications (Medium-style blog)." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">Mayach</a>
+      <nav class="top-nav">
+        <a href="#insights">Insights</a>
+        <a href="#practice">Practice Areas</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / Publication CTA -->
+    <section class="hero">
+      <div class="container">
+        <h1>Mayach — Legal practice & thought leadership</h1>
+        <p class="lead">Articles, analysis and legal practice. Read our latest insights or continue on our Medium publication.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#insights">Read Insights</a>
+          <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights / Blog preview (placeholder cards) -->
+    <section id="insights" class="section">
+      <div class="container">
+        <h2>Latest Insights</h2>
+        <div class="cards" id="posts">
+          <!-- JS will inject sample cards or you can replace with real posts -->
+          <article class="card">
+            <img src="assets/images/sample1.jpg" alt="Sample">
+            <h3>Sample Article Title</h3>
+            <p class="excerpt">A short excerpt of the article — summary for readers. Published on Medium; read more.</p>
+            <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+          </article>
+          <article class="card">
+            <img src="assets/images/sample2.jpg" alt="Sample">
+            <h3>Another Article</h3>
+            <p class="excerpt">Short summary. Link to the full article on Medium or your site.</p>
+            <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="practice" class="section alt">
+      <div class="container">
+        <h2>Practice Areas</h2>
+        <div class="grid">
+          <div class="tile"><h4>Corporate & M&A</h4><p>Advisory and transactional work.</p></div>
+          <div class="tile"><h4>Insolvency & Bankruptcy</h4><p>DRT / NCLT / DRT matters and debt resolution.</p></div>
+          <div class="tile"><h4>Dispute Resolution</h4><p>Arbitration and litigation strategy.</p></div>
+          <div class="tile"><h4>Employment & Labour</h4><p>Counsel for employers and employees.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section">
+      <div class="container">
+        <h2>Team</h2>
+        <div class="grid small">
+          <div class="person">
+            <img src="assets/images/person1.jpg" alt="Attorney">
+            <h4>Himanshu Soni</h4>
+            <p>Founder | Litigation & Insolvency</p>
+          </div>
+          <div class="person">
+            <img src="assets/images/person2.jpg" alt="Attorney">
+            <h4>Associate</h4>
+            <p>Practice Area</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>For enquiries or consultation, email <a href="mailto:info@mayach.in">info@mayach.in</a> or use the form below.</p>
+
+        <!-- Simple form using Formspree (replace YOUR_FORM_ID) -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+          <input name="name" placeholder="Full name" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <input name="phone" placeholder="Phone">
+          <textarea name="message" placeholder="How can we help?" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Mayach. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/disclaimer.html">Disclaimer</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
