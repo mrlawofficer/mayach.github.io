@@ -5,117 +5,143 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mayach — Law Practice & Publications</title>
   <meta name="description" content="Mayach — legal practice, insights and publications (Medium-style blog)." />
-
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome (icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN (icons) -->
   <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <a class="logo" href="/">Mayach</a>
-      <nav class="top-nav">
+      <nav class="top-nav" aria-label="Primary">
         <a href="#insights">Insights</a>
         <a href="#practice">Practice Areas</a>
         <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-sm">Contact</a>
       </nav>
+      <button id="nav-toggle" aria-label="Toggle menu" class="nav-toggle">☰</button>
     </div>
   </header>
 
   <main>
-    <!-- HERO / Publication CTA -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <h1>Mayach — Legal practice & thought leadership</h1>
-        <p class="lead">Articles, analysis and legal practice. Read our latest insights or continue on our Medium publication.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#insights">Read Insights</a>
-          <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Mayach — Legal Practice & Thought Leadership</h1>
+          <p class="lead">Practical legal analysis, case notes, and actionable commentary. Read our insights or explore the Medium publication.</p>
+          <p class="hero-ctas">
+            <a class="btn" href="#insights">Read Insights</a>
+            <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
+          </p>
+        </div>
+        <div class="hero-image">
+          <!-- decorative illustration (unsplash) -->
+          <img alt="Legal books and documents" src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d0b1e5f5c4c3a4e9d54d0aeb07b6d9f">
         </div>
       </div>
     </section>
 
-    <!-- Insights / Blog preview (placeholder cards) -->
+    <!-- LATEST INSIGHTS -->
     <section id="insights" class="section">
       <div class="container">
-        <h2>Latest Insights</h2>
-        <div class="cards" id="posts">
-          <!-- JS will inject sample cards or you can replace with real posts -->
+        <div class="section-head">
+          <h2>Latest Insights</h2>
+          <p class="muted">Curated picks from the publication and selected in-house posts.</p>
+        </div>
+
+        <div id="posts" class="cards">
+          <!-- JS will populate a few sample cards; if you prefer static cards, replace here -->
           <article class="card">
-            <img src="assets/images/sample1.jpg" alt="Sample">
-            <h3>Sample Article Title</h3>
-            <p class="excerpt">A short excerpt of the article — summary for readers. Published on Medium; read more.</p>
-            <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+            <img src="https://images.unsplash.com/photo-1521790360360-1f4a0bf86fdd?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c59bf8d6f0ef1dbb1d1f3d1e1a4c10a" alt="Article image">
+            <div class="card-body">
+              <h3>How insolvency law shapes debt resolution</h3>
+              <p class="excerpt">Short excerpt to pull the reader in — summary and impact.</p>
+              <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+            </div>
           </article>
+
           <article class="card">
-            <img src="assets/images/sample2.jpg" alt="Sample">
-            <h3>Another Article</h3>
-            <p class="excerpt">Short summary. Link to the full article on Medium or your site.</p>
-            <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b2f6ceec603f3d24d6f9a7a9b7f2b6b" alt="Article image">
+            <div class="card-body">
+              <h3>DRT & DRT practice — practical checklist</h3>
+              <p class="excerpt">Representative matters and practical tips for practitioners.</p>
+              <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Practice Areas -->
+    <!-- PRACTICE AREAS -->
     <section id="practice" class="section alt">
       <div class="container">
         <h2>Practice Areas</h2>
-        <div class="grid">
-          <div class="tile"><h4>Corporate & M&A</h4><p>Advisory and transactional work.</p></div>
-          <div class="tile"><h4>Insolvency & Bankruptcy</h4><p>DRT / NCLT / DRT matters and debt resolution.</p></div>
-          <div class="tile"><h4>Dispute Resolution</h4><p>Arbitration and litigation strategy.</p></div>
-          <div class="tile"><h4>Employment & Labour</h4><p>Counsel for employers and employees.</p></div>
+        <div class="grid tiles">
+          <div class="tile"><h4>Corporate & M&A</h4><p>Transaction advisory, documentation and compliance.</p></div>
+          <div class="tile"><h4>Insolvency & Bankruptcy</h4><p>Advisory for creditors and corporate debtors.</p></div>
+          <div class="tile"><h4>Dispute Resolution</h4><p>Commercial litigation and arbitration strategy.</p></div>
+          <div class="tile"><h4>Employment & Labour</h4><p>Counsel in employment disputes and compliance.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Team -->
+    <!-- TEAM -->
     <section id="team" class="section">
       <div class="container">
-        <h2>Team</h2>
-        <div class="grid small">
+        <div class="section-head">
+          <h2>Team</h2>
+          <p class="muted">A small team focused on results and insight.</p>
+        </div>
+
+        <div class="grid team-grid">
           <div class="person">
-            <img src="assets/images/person1.jpg" alt="Attorney">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b3f4b3c6d2a4b1b4ea4f8d9e4f1b9a0" alt="Himanshu Soni">
             <h4>Himanshu Soni</h4>
-            <p>Founder | Litigation & Insolvency</p>
+            <p class="muted small">Founder | Litigation & Insolvency</p>
           </div>
+
           <div class="person">
-            <img src="assets/images/person2.jpg" alt="Attorney">
+            <img src="https://images.unsplash.com/photo-1545996124-1f2f2d6f0e6a?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=ad3c9c6ea9f0b1a5f6d2a4e4b3c1d2a8" alt="Associate">
             <h4>Associate</h4>
-            <p>Practice Area</p>
+            <p class="muted small">Corporate & Transactions</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>For enquiries or consultation, email <a href="mailto:info@mayach.in">info@mayach.in</a> or use the form below.</p>
+      <div class="container contact-wrap">
+        <div class="contact-column">
+          <h2>Contact</h2>
+          <p>For enquiries or consultation, email <a href="mailto:info@mayach.in">info@mayach.in</a></p>
+          <dl class="contact-list">
+            <dt>Office</dt><dd>Kanpur, Uttar Pradesh</dd>
+            <dt>Phone</dt><dd>+91 - 00000 00000</dd>
+          </dl>
+        </div>
 
-        <!-- Simple form using Formspree (replace YOUR_FORM_ID) -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-          <input name="name" placeholder="Full name" required>
-          <input name="email" type="email" placeholder="Email" required>
-          <input name="phone" placeholder="Phone">
-          <textarea name="message" placeholder="How can we help?" required></textarea>
-          <button type="submit" class="btn">Send</button>
-        </form>
+        <div class="contact-column">
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label><input name="name" placeholder="Full name" required></label>
+            <label><input name="email" type="email" placeholder="Email" required></label>
+            <label><input name="phone" placeholder="Phone"></label>
+            <label><textarea name="message" placeholder="How can we help?" required></textarea></label>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Mayach. All rights reserved. | <a href="/privacy.html">Privacy</a> | <a href="/disclaimer.html">Disclaimer</a></p>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Mayach. All rights reserved.</div>
+      <nav class="footer-nav"><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a></nav>
     </div>
   </footer>
 
