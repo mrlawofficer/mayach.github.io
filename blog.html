@@ -8,22 +8,134 @@ title: Blog
   <meta charset="utf-8">
   <title>Blog – Mayach</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Optional: use the same font as main site; safe even if repeated -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text-main: #0b1726;
+      --text-muted: #6b7280;
+      --accent: #0b5cff;
+      --max-width: 900px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+    .blog-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+      gap: 12px;
+    }
+    .blog-header-title {
+      font-size: 26px;
+      margin: 0;
+    }
+    .blog-header-sub {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .blog-nav a {
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--accent);
+      margin-left: 12px;
+    }
+    .blog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .blog-item a {
+      display: block;
+      text-decoration: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    .blog-item a:hover {
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      transform: translateY(-1px);
+      border-color: #cbd5f5;
+    }
+    .blog-item-title {
+      margin: 0;
+      font-size: 16px;
+    }
+    .blog-item-meta {
+      margin: 4px 0 0;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    @media (max-width: 600px) {
+      .blog-shell { padding: 24px 14px 36px; }
+      .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .blog-header-title { font-size: 22px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Insights & Articles</h1>
-  <p>This page lists all articles imported from my Medium publication, now hosted on mayach.in.</p>
+  <div class="blog-shell">
+    <header class="blog-header">
+      <div>
+        <h1 class="blog-header-title">Insights & Articles</h1>
+        <p class="blog-header-sub">
+          All long-form pieces from the Mr Law Officer publication, now hosted on mayach.in.
+        </p>
+      </div>
+      <nav class="blog-nav">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </header>
 
-  <ul>
-    {%- assign articles = site.static_files | where_exp: "file", "file.path contains '/articles/'" -%}
-    {%- for file in articles -%}
-      {%- if file.extname == ".html" -%}
-        <li>
-          <a href="{{ file.path | relative_url }}">
-            {{ file.name | replace: '-', ' ' | replace: '.html','' }}
-          </a>
-        </li>
-      {%- endif -%}
-    {%- endfor -%}
-  </ul>
+    <ul class="blog-list">
+      {%- assign articles = site.static_files | where_exp: "file", "file.path contains '/articles/'" -%}
+      {%- assign sorted = articles | sort: "name" | reverse -%}
+      {%- for file in sorted -%}
+        {%- if file.extname == ".html" -%}
+          <li class="blog-item">
+            <a href="{{ file.path | relative_url }}">
+              <p class="blog-item-title">
+                {{ file.name
+                   | replace: '.html',''
+                   | replace: '_',' '
+                   | replace: '-', ' ' }}
+              </p>
+              <p class="blog-item-meta">
+                {{ file.name | slice: 0, 10 }} · HTML import
+              </p>
+            </a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
 </body>
 </html>
