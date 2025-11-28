@@ -4,51 +4,58 @@ title: Home
 ---
 
 <section class="hero">
-  <div class="hero-inner container">
-    <div class="hero-copy">
-      <h1>Mayach — Legal Practice & Thought Leadership</h1>
-      <p class="lead">Practical legal analysis, case notes, and actionable commentary. Read our insights or explore my Medium publication.</p>
-      <p class="cta">
-        <a class="btn" href="/blog/">Read Blog</a>
-        <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
-      </p>
-    </div>
-    <div class="hero-image">
-      <img src="{{ '/assets/images/hero.jpg' | relative_url }}" alt="Legal books and documents">
-    </div>
-  </div>
-</section>
-
-<section id="insights" class="section">
   <div class="container">
-    <div class="section-head">
-      <h2>Latest Insights</h2>
-      <p class="muted">Curated picks from the publication and selected in-house posts.</p>
-    </div>
+    <div class="hero-card" style="display:flex;gap:28px;align-items:center;">
+      <!-- left column: logo + firm heading -->
+      <div style="flex:1;">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Mayach & Co. Logo" style="width:240px; display:block; margin-bottom:18px;">
+        <h1 style="margin:0 0 6px;">Mayach & Co.</h1>
+        <p class="lead">A research-led legal practice — litigation, insolvency, and advisory with an emphasis on clear legal writing and strategy.</p>
+        <p style="margin-top:14px;">
+          <a class="btn" href="{{ '/blog/' | relative_url }}">Read Insights</a>
+          <a class="btn ghost" href="{{ '/about/cv/' | relative_url }}">View CV</a>
+        </p>
+      </div>
 
-    {% include latest-posts.html count=6 %}
+      <!-- right column: profile image & quick details -->
+      <div style="width:320px;">
+        <div class="stack-card" style="padding:18px; text-align:center;">
+          <img src="{{ '/assets/images/profile.png' | relative_url }}" alt="Himanshu Soni" style="width:100%; height:auto; border-radius:12px; object-fit:cover;">
+          <h3 style="margin:12px 0 4px;">Himanshu Soni</h3>
+          <div class="muted">Founder — Mayach & Co. | Law Student, Law Centre-1, University of Delhi</div>
+          <div style="margin-top:10px;font-size:14px;">
+            <div><strong>Email:</strong> <a href="mailto:office@mayach.in">office@mayach.in</a></div>
+            <div><strong>Contact:</strong> <a href="tel:+917355057573">+91 73550 57573</a></div>
+            <div style="margin-top:8px;"><a href="{{ '/about/cv/' | relative_url }}" class="btn ghost">Full CV</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="section alt">
-  <div class="container contact-wrap">
-    <div class="contact-column">
-      <h2>Contact</h2>
-      <p>For enquiries or consultation, email <a href="mailto:office@mayach.in">office@mayach.in</a></p>
-      <dl class="contact-list">
-        <dt>Office</dt><dd>Kanpur, Uttar Pradesh</dd>
-        <dt>Phone</dt><dd>+91 - 00000 00000</dd>
-      </dl>
-    </div>
+<!-- Short intro / quick links -->
+<section class="section">
+  <div class="container">
+    <h2>Practice & Publications</h2>
+    <p class="muted">I write and publish on insolvency, intellectual property, evidence and procedural practice. Read insights, case notes and full articles from my publication.</p>
 
-    <div class="contact-column">
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label><input name="name" placeholder="Full name" required></label>
-        <label><input name="email" type="email" placeholder="Email" required></label>
-        <label><input name="phone" placeholder="Phone"></label>
-        <label><textarea name="message" placeholder="How can we help?" required></textarea></label>
-        <button class="btn" type="submit">Send</button>
-      </form>
+    <div class="grid" style="margin-top:18px;">
+      <div class="card">
+        <h4>Intellectual Property</h4>
+        <p class="muted">Case notes, analysis and commentary on IP law and policy.</p>
+        <p><a href="/blog/intellectual-property/" class="btn ghost">Open</a></p>
+      </div>
+      <div class="card">
+        <h4>Insolvency & Debt</h4>
+        <p class="muted">Practical notes for creditors, corporate counsel and tribunals.</p>
+        <p><a href="/blog/insolvency/" class="btn ghost">Open</a></p>
+      </div>
+      <div class="card">
+        <h4>Procedure & Evidence</h4>
+        <p class="muted">Evidence law notes, procedural strategy and case law summaries.</p>
+        <p><a href="/blog/evidence/" class="btn ghost">Open</a></p>
+      </div>
     </div>
   </div>
 </section>
