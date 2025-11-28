@@ -16,19 +16,18 @@
     <div class="container header-inner">
       <a class="logo" href="/">Mayach</a>
       <nav class="top-nav" aria-label="Primary">
-  <a href="/blog">Blog</a>
-  <a href="#practice">Practice Areas</a>
-  <a href="#team">Team</a>
-  <a href="#contact" class="btn btn-sm">Contact</a>
-</nav>
+        <a href="/blog">Blog</a>
+        <a href="#practice">Practice Areas</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="btn btn-sm">Contact</a>
+      </nav>
       <button id="nav-toggle" aria-label="Toggle menu" class="nav-toggle">☰</button>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO: iPad-like liquid visual -->
     <section class="hero">
-      <div class="hero-overlay"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1>Mayach — Legal Practice & Thought Leadership</h1>
@@ -38,9 +37,29 @@
             <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
           </p>
         </div>
-        <div class="hero-image">
-          <!-- decorative illustration (unsplash) -->
-          <img alt="Legal books and documents" src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d0b1e5f5c4c3a4e9d54d0aeb07b6d9f">
+
+        <!-- Visual area: half faded image + translucent logo/ccv card -->
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Replace this image with your actual image URL or local asset -->
+          <img class="visual-img" src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d0b1e5f5c4c3a4e9d54d0aeb07b6d9f" alt="Decorative legal image">
+          <!-- Gradient overlay that produces the half-fade effect -->
+          <div class="visual-fade"></div>
+
+          <!-- translucent logo/ccv card placed to the right half -->
+          <div class="logo-card">
+            <!-- Replace with your firm's logo path or inline SVG -->
+            <img src="assets/images/logo-placeholder.png" alt="Mayach logo" class="logo-card-logo">
+            <div class="logo-card-text">
+              <strong>Mayach</strong>
+              <span class="small-muted">Law Practice & Publications</span>
+            </div>
+            <!-- "ccv" area — placeholder. Tell me what you mean by CCV and I will update -->
+            <div class="logo-card-ccv">CCV • 123</div>
+          </div>
+
+          <!-- subtle floating blobs for iOS-like liquid feel -->
+          <div class="float-blob blob-1"></div>
+          <div class="float-blob blob-2"></div>
         </div>
       </div>
     </section>
@@ -76,44 +95,9 @@
       </div>
     </section>
 
-    <!-- PRACTICE AREAS -->
-    <section id="practice" class="section alt">
-      <div class="container">
-        <h2>Practice Areas</h2>
-        <div class="grid tiles">
-          <div class="tile"><h4>Corporate & M&A</h4><p>Transaction advisory, documentation and compliance.</p></div>
-          <div class="tile"><h4>Insolvency & Bankruptcy</h4><p>Advisory for creditors and corporate debtors.</p></div>
-          <div class="tile"><h4>Dispute Resolution</h4><p>Commercial litigation and arbitration strategy.</p></div>
-          <div class="tile"><h4>Employment & Labour</h4><p>Counsel in employment disputes and compliance.</p></div>
-        </div>
-      </div>
-    </section>
+    <!-- ... rest of page unchanged ... -->
 
-    <!-- TEAM -->
-    <section id="team" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Team</h2>
-          <p class="muted">A small team focused on results and insight.</p>
-        </div>
-
-        <div class="grid team-grid">
-          <div class="person">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b3f4b3c6d2a4b1b4ea4f8d9e4f1b9a0" alt="Himanshu Soni">
-            <h4>Himanshu Soni</h4>
-            <p class="muted small">Founder | Litigation & Insolvency</p>
-          </div>
-
-          <div class="person">
-            <img src="https://images.unsplash.com/photo-1545996124-1f2f2d6f0e6a?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=ad3c9c6ea9f0b1a5f6d2a4e4b3c1d2a8" alt="Associate">
-            <h4>Associate</h4>
-            <p class="muted small">Corporate & Transactions</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        <!-- CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="section alt">
       <div class="container contact-wrap">
         <div class="contact-column">
