@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Summary / Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Publication / Category", name: "categories", widget: "list", required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "about/cv.md"
+        label: "About / CV"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "contact.html"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
