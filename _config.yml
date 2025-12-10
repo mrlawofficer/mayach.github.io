@@ -1,11 +1,14 @@
 title: Mayach
 email: office@mayach.in
-description: >-
-  Mayach — Legal practice & thought leadership. Practical legal analysis, case notes and commentary.
-baseurl: ""         # leave empty for GitHub user/org site
+description: "Mayach — Legal practice & thought leadership."
+baseurl: "" 
 url: "https://mayach.in"
-paginate: 6
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 markdown: kramdown
+collections:
+  posts:
+    output: true
+permalink: /:categories/:year/:month/:day/:title/
