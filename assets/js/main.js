@@ -18,3 +18,29 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 });
+
+// main.js - iPad liquid micro interactions + dropdown keyboard accessible
+document.addEventListener('DOMContentLoaded', function(){
+  // hero parallax: optional (kept from previous)
+  const hero = document.querySelector('.hero-card');
+  if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.addEventListener('mousemove', e=>{
+      const w = window.innerWidth, h = window.innerHeight;
+      const x = (e.clientX - w/2) / (w/2);
+      const y = (e.clientY - h/2) / (h/2);
+      hero.style.transform = `translate3d(${x*6}px, ${y*6}px, 0)`;
+    });
+  }
+
+  // accessible dropdown keyboard fallback
+  document.querySelectorAll('.dropdown').forEach(drop=>{
+    drop.addEventListener('keydown', e=>{
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const content = drop.querySelector('.dropdown-content');
+        if(content) content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      }
+    });
+  });
+});
+

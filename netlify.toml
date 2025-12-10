@@ -1,0 +1,7 @@
+[build]
+  command   = "bundle exec jekyll build"
+  publish   = "_site"
+  environment = { "JEKYLL_ENV" = "production" }
+
+[context.production.environment]
+  JEKYLL_ENV = "production"

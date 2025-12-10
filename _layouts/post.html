@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="article-wrapper">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <div class="article-meta">{{ page.date | date: "%B %-d, %Y" }} • {{ page.categories | join: ", " }}</div>
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
+  </header>
+
+  <section class="post-body">
+    {{ content }}
+  </section>
+
+  <footer class="article-footer">
+    <p class="muted">Filed under: {{ page.categories | join: ", " }}</p>
+  </footer>
+</article>
+
+<style>
+.post-body { text-align: justify; text-justify: inter-word; }
+.post-body p { margin-bottom: 1em; }
+</style>
