@@ -3,7 +3,6 @@ email: office@mayach.in
 description: "Mayach — Legal practice & thought leadership."
 baseurl: "" 
 url: "https://mayach.in"
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
