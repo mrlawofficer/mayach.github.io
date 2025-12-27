@@ -1,49 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mayach & Co. | Advocate Himanshu Soni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayach & Co. | Advocates & Legal Consultants</title>
+
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        header { text-align: center; margin-bottom: 40px; }
-        img { width: 180px; border-radius: 10px; margin-top: 20px; }
-        nav a { margin: 0 15px; text-decoration: none; color: black; font-weight: bold; }
-        form { max-width: 500px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-        input, textarea { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        button { padding: 12px 20px; background: black; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #092b4c;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header img {
+            width: 240px;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+            background: #ffffff;
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #092b4c;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #092b4c;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        button {
+            background: #092b4c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #064073;
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Mayach & Co.</h1>
-    <h3>Advocate Himanshu Soni</h3>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-    </nav>
-    <img src="your-photo.jpg" alt="Profile Photo">
+    <img src="logo.png" alt="Mayach & Co. Logo">
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        Advocate Himanshu Soni is a legal researcher and practitioner experienced in 
-        litigation, advisory work, drafting, and academic legal writing.  
-        This website is designed to help clients contact me and to share legal knowledge through blogs.
-    </p>
-</section>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+</nav>
 
-<section>
-    <h2>Contact for Legal Services</h2>
+<div class="container">
+    <h2>About Advocate Himanshu Soni</h2>
+    <p>
+        Advocate Himanshu Soni is a legal researcher and practitioner specialising in civil, commercial, and 
+        technology law matters. With experience in advisory work, drafting, research, and litigation strategy, 
+        he works with individuals and businesses seeking professional legal assistance.
+    </p>
+
+    <h2>Request Legal Consultation</h2>
     <form action="https://formsubmit.co/office@mayach.in" method="POST">
-        <input type="hidden" name="_subject" value="New Legal Query">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Describe your issue" rows="5" required></textarea>
-        <button type="submit">Submit</button>
+        <input type="hidden" name="_subject" value="New Legal Enquiry — Mayach & Co.">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="5" placeholder="Describe your legal issue…" required></textarea>
+
+        <button type="submit">Submit Request</button>
     </form>
-</section>
+</div>
 
 </body>
 </html>
