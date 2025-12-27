@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mayach & Co.</title>
+
     <style>
         body {
-            font-family: Georgia, serif;
             margin: 40px;
-            background: #f8f8f8;
+            font-family: Georgia, serif;
+            background: #f7f7f7;
         }
-        h1 { color: #092b4c; }
-        a {
+
+        h1 {
+            color: #092b4c;
+        }
+
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-list li {
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-left: 4px solid #092b4c;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .post-list a {
             text-decoration: none;
             color: #092b4c;
             font-size: 20px;
+            font-weight: bold;
         }
-        ul { list-style: none; padding: 0; }
-        li { margin: 12px 0; }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 16px;
+            background: #092b4c;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
 
-<h1>Legal Articles</h1>
+<h1>Legal Articles by Advocate Himanshu Soni</h1>
 
-<p>Below are articles authored by Advocate Himanshu Soni:</p>
-
-<ul>
+<ul class="post-list">
     <li><a href="posts/post1.html">Sample Article Title</a></li>
 </ul>
+
+<a class="back-home" href="index.html">Back to Home</a>
 
 </body>
 </html>
