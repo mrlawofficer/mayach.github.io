@@ -1,135 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mayach — Law Practice & Publications</title>
-  <meta name="description" content="Mayach — legal practice, insights and publications (Medium-style blog)." />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome CDN (icons) -->
-  <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Mayach & Co. | Advocate Himanshu Soni</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        header { text-align: center; margin-bottom: 40px; }
+        img { width: 180px; border-radius: 10px; margin-top: 20px; }
+        nav a { margin: 0 15px; text-decoration: none; color: black; font-weight: bold; }
+        form { max-width: 500px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 12px 20px; background: black; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/">Mayach</a>
-      <nav class="top-nav" aria-label="Primary">
-        <a href="/blog">Blog</a>
-        <a href="#practice">Practice Areas</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="btn btn-sm">Contact</a>
-      </nav>
-      <button id="nav-toggle" aria-label="Toggle menu" class="nav-toggle">☰</button>
-    </div>
-  </header>
 
-  <main>
-    <!-- HERO: iPad-like liquid visual -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Mayach — Legal Practice & Thought Leadership</h1>
-          <p class="lead">Practical legal analysis, case notes, and actionable commentary. Read our insights or explore the Medium publication.</p>
-          <p class="hero-ctas">
-            <a class="btn" href="#insights">Read Insights</a>
-            <a class="btn btn-outline" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Visit my Medium</a>
-          </p>
-        </div>
+<header>
+    <h1>Mayach & Co.</h1>
+    <h3>Advocate Himanshu Soni</h3>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+    <img src="your-photo.jpg" alt="Profile Photo">
+</header>
 
-        <!-- Visual area: half faded image + translucent logo/ccv card -->
-        <div class="hero-visual" aria-hidden="true">
-          <!-- Replace this image with your actual image URL or local asset -->
-          <img class="visual-img" src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d0b1e5f5c4c3a4e9d54d0aeb07b6d9f" alt="Decorative legal image">
-          <!-- Gradient overlay that produces the half-fade effect -->
-          <div class="visual-fade"></div>
+<section>
+    <h2>About Me</h2>
+    <p>
+        Advocate Himanshu Soni is a legal researcher and practitioner experienced in 
+        litigation, advisory work, drafting, and academic legal writing.  
+        This website is designed to help clients contact me and to share legal knowledge through blogs.
+    </p>
+</section>
 
-          <!-- translucent logo/ccv card placed to the right half -->
-          <div class="logo-card">
-            <!-- Replace with your firm's logo path or inline SVG -->
-            <img src="assets/images/logo-placeholder.png" alt="Mayach logo" class="logo-card-logo">
-            <div class="logo-card-text">
-              <strong>Mayach</strong>
-              <span class="small-muted">Law Practice & Publications</span>
-            </div>
-            <!-- "ccv" area — placeholder. Tell me what you mean by CCV and I will update -->
-            <div class="logo-card-ccv">CCV • 123</div>
-          </div>
+<section>
+    <h2>Contact for Legal Services</h2>
+    <form action="https://formsubmit.co/office@mayach.in" method="POST">
+        <input type="hidden" name="_subject" value="New Legal Query">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe your issue" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
-          <!-- subtle floating blobs for iOS-like liquid feel -->
-          <div class="float-blob blob-1"></div>
-          <div class="float-blob blob-2"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LATEST INSIGHTS -->
-    <section id="insights" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Latest Insights</h2>
-          <p class="muted">Curated picks from the publication and selected in-house posts.</p>
-        </div>
-
-        <div id="posts" class="cards">
-          <!-- JS will populate a few sample cards; if you prefer static cards, replace here -->
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1521790360360-1f4a0bf86fdd?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c59bf8d6f0ef1dbb1d1f3d1e1a4c10a" alt="Article image">
-            <div class="card-body">
-              <h3>How insolvency law shapes debt resolution</h3>
-              <p class="excerpt">Short excerpt to pull the reader in — summary and impact.</p>
-              <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=60&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b2f6ceec603f3d24d6f9a7a9b7f2b6b" alt="Article image">
-            <div class="card-body">
-              <h3>DRT & DRT practice — practical checklist</h3>
-              <p class="excerpt">Representative matters and practical tips for practitioners.</p>
-              <a class="read-more" href="https://mrlawofficer.medium.com" target="_blank" rel="noopener">Read on Medium →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ... rest of page unchanged ... -->
-
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
-      <div class="container contact-wrap">
-        <div class="contact-column">
-          <h2>Contact</h2>
-          <p>For enquiries or consultation, email <a href="mailto:office@mayach.in">office@mayach.in</a></p>
-          <dl class="contact-list">
-            <dt>Office</dt><dd>Kanpur, Uttar Pradesh</dd>
-            <dt>Phone</dt><dd>+91 - 00000 00000</dd>
-          </dl>
-        </div>
-
-        <div class="contact-column">
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label><input name="name" placeholder="Full name" required></label>
-            <label><input name="email" type="email" placeholder="Email" required></label>
-            <label><input name="phone" placeholder="Phone"></label>
-            <label><textarea name="message" placeholder="How can we help?" required></textarea></label>
-            <button class="btn" type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Mayach. All rights reserved.</div>
-      <nav class="footer-nav"><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a></nav>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
